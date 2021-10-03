@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <uie:Toolbar style="background-color: rgba(0, 0, 0, 255); height: 21px;">
+        <uie:ToolbarMenu display-tooltip-when-elided="true" text="Asset" />
+    </uie:Toolbar>
+    <ui:VisualElement name="Split" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement style="width: 113px;">
+            <ui:Label text="Inspector" display-tooltip-when-elided="true" style="background-color: rgba(31, 31, 31, 255);" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -8,6 +8,12 @@ EditorUserSettings:
     RecentlyUsedScenePath-0:
       value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
       flags: 0
+    RecentlyUsedScenePath-1:
+      value: 2242470311464677040c43061922531f11021d19353b323520662936f1f47b1cebe63ae6e02f3a0f2011fb3909701431fb1e10
+      flags: 0
+    UIBuilder.HideNotificationAboutMissingUITKPackage:
+      value: 37434103
+      flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0
