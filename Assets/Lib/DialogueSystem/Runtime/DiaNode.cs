@@ -18,6 +18,9 @@ public class DiaNode : ScriptableObject
 
 
     public bool IsOver => Output == null;
+
+    [HideInInspector]
+    public Vector2 position;
 }
 
 [System.Serializable]
