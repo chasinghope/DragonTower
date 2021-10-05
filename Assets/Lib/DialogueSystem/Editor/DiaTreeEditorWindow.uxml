@@ -4,9 +4,9 @@
         <uie:ToolbarMenu display-tooltip-when-elided="true" text="Asset" name="ToolbarMenu" />
     </uie:Toolbar>
     <ui:VisualElement name="Split" style="flex-grow: 1; flex-direction: row;">
-        <ui:VisualElement name="VisualElement" style="width: 113px;">
-            <ui:Label text="Inspector" display-tooltip-when-elided="true" style="background-color: rgb(31, 31, 31);" />
-        </ui:VisualElement>
-        <DiaGraphView focusable="true" style="flex-grow: 1;" />
+        <DiaInspectorView style="width: 30%; flex-grow: 0;">
+            <ui:Label text="Inspector" display-tooltip-when-elided="true" style="background-color: rgb(0, 0, 0);" />
+        </DiaInspectorView>
+        <DiaGraphView focusable="true" style="flex-grow: 1; width: 20%;" />
     </ui:VisualElement>
 </ui:UXML>

@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
 public class DiaNode : ScriptableObject
 {
     [Header("节点关系")]
     public DiaNode FrontNode;
-    public DiaOutput[] Output;
+    public List<DiaOutput> Output = new List<DiaOutput>();
 
 
     [Header("节点内容")]
+    public string Title = "Null";
     public Sprite Icon;
     public DiaType Type = DiaType.None;
     [TextArea(10, 20)]
@@ -18,9 +18,12 @@ public class DiaNode : ScriptableObject
 
 
     public bool IsOver => Output == null;
+    public string Guid { get; internal set; }
 
     [HideInInspector]
-    public Vector2 position;
+    public Vector2 position = Vector2.one * 30;
+
+
 }
 
 [System.Serializable]

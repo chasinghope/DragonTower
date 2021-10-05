@@ -13,63 +13,49 @@ public class DiaNodeView : UnityEditor.Experimental.GraphView.Node
 
     public DiaNode node;
     public Port inputPort;
-    public Port[] ouputPorts;
+    public List<Port> outputPorts;
 
-    public DiaNodeView(DiaNodeView node)
+    //public Port outputPort { get; private set; }
+
+    public DiaNodeView(DiaNode node)
     {
-           
+        this.node = node;
+        this.title = node.Title;
+        this.viewDataKey = node.Guid;
+
+        style.left = node.position.x;
+        style.top = node.position.y;
+        outputPorts = new List<Port>();
+
+        CreateInputPorts();
+        CreateOutputPorts();
     }
 
-    private void CreateOutputPorts()
+
+
+
+    public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
     {
-        //if (node is ActionNode)
-        //{
-
-        //}
-        //else if (node is DecoratorNode)
-        //{
-        //    outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
-        //}
-        //else if (node is CompositeNode)
-        //{
-        //    outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Multi, typeof(bool));
-        //}
-        //else if (node is RootNode)
-        //{
-        //    outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
-        //}
-
-        //if (outputPort != null)
-        //{
-        //    outputPort.portName = "";
-        //    outputContainer.Add(outputPort);
-        //}
+        base.BuildContextualMenu(evt);
+        evt.menu.AppendAction("添加输出端口", (a) => AddOutputPort());
+        evt.menu.AppendAction("删除未连接输出端口", (a) => RemoveDisconnectPorts());
     }
 
-    private void CreateInputPorts()
+    private void RemoveDisconnectPorts()
     {
-        //if (node is ActionNode)
-        //{
-        //    inputPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(bool));
-        //}
-        //else if (node is DecoratorNode)
-        //{
-        //    inputPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(bool));
-        //}
-        //else if (node is CompositeNode)
-        //{
-        //    inputPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(bool));
-        //}
-        //else if (node is RootNode)
-        //{
-
-        //}
-
-        //if (inputPort != null)
-        //{
-        //    inputPort.portName = "";
-        //    inputContainer.Add(inputPort);
-        //}
+        List<Port> disconnectPorts = outputPorts.FindAll(port=>{
+            int count = 0;
+            foreach (var item in port.connections)
+            {
+                count++;
+            }
+            return count == 0 ? true : false;
+        });
+        foreach (var item in disconnectPorts)
+        {
+            outputPorts.Remove(item);
+            outputContainer.Remove(item);
+        }
     }
 
     public override void SetPosition(Rect newPos)
@@ -85,4 +71,46 @@ public class DiaNodeView : UnityEditor.Experimental.GraphView.Node
         if (OnNodeSelected != null)
             OnNodeSelected.Invoke(this);
     }
+
+    void CreateOutputPorts()
+    {
+
+        if(node.Output.Count == 0)
+        {
+            Port outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
+            outputPort.portName = "next";
+            outputPort.portColor = new Color(0 / 255f, 180 / 255f, 235 / 255f);
+            outputContainer.Add(outputPort);
+        }
+
+        foreach (var item in node.Output)
+        {
+            Port outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
+            outputPort.portName = item.Descirbe;
+            outputPort.portColor = new Color(0 / 255f, 180 / 255f, 235 / 255f);
+            outputContainer.Add(outputPort);
+            outputPorts.Add(outputPort);
+        }
+    }
+
+    void CreateInputPorts()
+    {
+        if(inputPort == null)
+        {
+            inputPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(bool));
+            inputPort.portName = "enter";
+            inputPort.portColor = new Color(50/255f, 205/255f, 50/255f);
+            inputContainer.Add(inputPort);
+        }
+    }
+
+    void AddOutputPort()
+    {
+        Port outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
+        outputPort.portName = "next";
+        outputPort.portColor = new Color(0 / 255f, 180 / 255f, 235 / 255f);
+        outputContainer.Add(outputPort);
+        outputPorts.Add(outputPort);
+    }
+
 }
