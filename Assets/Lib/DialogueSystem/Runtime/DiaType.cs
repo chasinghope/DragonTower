@@ -9,3 +9,10 @@ public enum DiaType
     PersonalityAdjudication,         //人格裁决
     NPC                           //NPC对话
 }
+
+
+public enum DiaTarget
+{
+    Other,
+    Self
+}
