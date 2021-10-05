@@ -11,10 +11,9 @@ public class DiaNode : ScriptableObject
 
     [Header("½ÚµãÄÚÈÝ")]
     public string Title = "Null";
-
-    public DiaType Type = DiaType.None;
-    public string Name;
     public Sprite Icon;
+    public string Name;
+    public DiaType Type = DiaType.None;
     [TextArea(10, 20)]
     public string Text;
 
@@ -24,6 +23,8 @@ public class DiaNode : ScriptableObject
 
     [HideInInspector]
     public Vector2 position = Vector2.one * 30;
+
+
 }
 
 [System.Serializable]

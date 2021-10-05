@@ -603,7 +603,6 @@ MonoBehaviour:
   SpeakerImg: {fileID: 1075636898}
   NameText: {fileID: 1967727245}
   ContentText: {fileID: 924138737}
-  layoutElements: []
 --- !u!1 &785140989
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19df127fa277dd54c973ec18e8f3812f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DiaInfo: {fileID: 11400000, guid: 842b8aa7c1475724194d58bbfa962b88, type: 2}
+  DiaInfo: {fileID: 11400000, guid: 0d2378cc1cfa406489b66c64c80fb38a, type: 2}
   startDiaNode: {fileID: 0}
 --- !u!1 &805303287
 GameObject:
@@ -1551,7 +1550,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 85, y: -80.1}
-  m_SizeDelta: {x: 280.0671, y: 34.5214}
+  m_SizeDelta: {x: 339.8995, y: 41.5846}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1967727245
 MonoBehaviour:
