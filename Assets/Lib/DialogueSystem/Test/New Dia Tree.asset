@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6241019276247017842
+--- !u!114 &-4576937381707729756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,40 +10,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 708ba31fc0632684daece22828b9d121, type: 3}
-  m_Name: "\u5BF9\u8BDD\u8282\u70B9"
+  m_Name: Node2
   m_EditorClassIdentifier: 
-  FrontNode: {fileID: 3270080881121736495}
+  Guid: 3c58f22efdf09a2498a2a0b218d6ed5d
+  FrontNode: {fileID: 1941615517160538531}
+  Output: []
+  Title: NULL
+  Icon: {fileID: 0}
+  Name: chasinghope
+  Type: 0
+  Text: "\u7F8E\u56FD\u81EA\u7531\u5973\u795E\u50CF\u4E0D\u9519"
+  position: {x: 155, y: 319}
+--- !u!114 &-617976259445125035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708ba31fc0632684daece22828b9d121, type: 3}
+  m_Name: Node3
+  m_EditorClassIdentifier: 
+  Guid: ce4ce22289c2061459c70de9744587c1
+  FrontNode: {fileID: 4608542862735128979}
   Output:
-  - Descirbe: 00
+  - Descirbe: 
     Answer: 
-    NextNode: {fileID: 6286919500610816147}
+    NextNode: {fileID: 8094954967712680761}
   Title: NULL
   Icon: {fileID: 0}
   Name: chasinghope
   Type: 0
   Text: "\u57C3\u83F2\u5C14\u94C1\u5854\uFF08\u6CD5\u8BED\uFF1ALa Tour Eiffel\uFF1B\u82F1\u8BED\uFF1Athe
     Eiffel Tower\uFF09"
-  position: {x: 536, y: -12.5}
---- !u!114 &-2217889869305991398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708ba31fc0632684daece22828b9d121, type: 3}
-  m_Name: "\u5BF9\u8BDD\u8282\u70B9"
-  m_EditorClassIdentifier: 
-  FrontNode: {fileID: 3994120467676848634}
-  Output: []
-  Title: "\u7F8E\u56FD"
-  Icon: {fileID: 0}
-  Name: chasinghope
-  Type: 1
-  Text: "\u7F8E\u56FD"
-  position: {x: 342, y: 215}
+  position: {x: 330, y: 198}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,62 +58,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc5d3398ebee2a42b4e966f1474bc72, type: 3}
   m_Name: New Dia Tree
   m_EditorClassIdentifier: 
-  root: {fileID: 3994120467676848634}
+  root: {fileID: 1941615517160538531}
   Tree:
-  - {fileID: 3994120467676848634}
-  - {fileID: 3270080881121736495}
-  - {fileID: -2217889869305991398}
-  - {fileID: -6241019276247017842}
-  - {fileID: 6286919500610816147}
-  - {fileID: 1064539503022597126}
-  - {fileID: 6573755409887761734}
---- !u!114 &1064539503022597126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708ba31fc0632684daece22828b9d121, type: 3}
-  m_Name: "\u5BF9\u8BDD\u8282\u70B9"
-  m_EditorClassIdentifier: 
-  FrontNode: {fileID: 6286919500610816147}
-  Output:
-  - Descirbe: 00
-    Answer: 
-    NextNode: {fileID: 6573755409887761734}
-  Title: NULL
-  Icon: {fileID: 0}
-  Name: chasinghope
-  Type: 0
-  Text: "\u57C3\u83F2\u5C14\u94C1\u5854\u7684\u7ED3\u6784\u4F53\u7CFB\u65E2\u76F4\u89C2\u53C8\u7B80\u6D01\uFF1A\u5E95\u90E8\u662F\u5206\u5E03\u5728\u6BCF\u8FB9128\u7C73\uFF0C\u957F\u5E95\u5EA7\u4E0A\u76844\u4E2A\u5DE8\u578B\u89D2\u5F62\u503E\u659C\u67F1\u58A9\uFF08\u503E\u89D254\xB0\uFF09\uFF0C\u5176\u7531\u6807\u9AD855\u7C73\u5904\u7684\u7B2C\u4E00\u5E73\u53F0\u652F\u6491\u7740\uFF1B\u7B2C\u4E00\u5E73\u53F0\u548C\u6807\u9AD8\u4E3A115\u7C73\u7684\u7B2C\u4E8C\u5E73\u53F0\u4E4B\u95F4\u67094\u4E2A\u5FAE\u66F2\u7684\u89D2\u7ACB\u67F1\u76F8\u8FDE\uFF1B\u5411\u4E0A\u8F6C\u5316\u4E3A\u7EC6\u957F\u7684\u3001\u51E0\u4E4E\u5782\u76F4\u7684\u3001189\u7C73\u9AD8\u3001\u521A\u6027\u5F88\u5927\u7684\u65B9\u5C16\u5854\uFF0C\u76F4\u901A\u9876\u90E8\u5E73\u53F0"
-  position: {x: 877.64606, y: -13.000008}
---- !u!114 &3270080881121736495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708ba31fc0632684daece22828b9d121, type: 3}
-  m_Name: "\u5BF9\u8BDD\u8282\u70B9"
-  m_EditorClassIdentifier: 
-  FrontNode: {fileID: 3994120467676848634}
-  Output:
-  - Descirbe: 00
-    Answer: 
-    NextNode: {fileID: -6241019276247017842}
-  Title: "\u6CD5\u56FD"
-  Icon: {fileID: 0}
-  Name: chasinghope
-  Type: 1
-  Text: "\u6CD5\u56FD\u57C3\u83F2\u5C14\u94C1\u5854\u4E0D\u9519"
-  position: {x: 360, y: -13}
---- !u!114 &3994120467676848634
+  - {fileID: 4608542862735128979}
+  - {fileID: 1941615517160538531}
+  - {fileID: -4576937381707729756}
+  - {fileID: -617976259445125035}
+  - {fileID: 8094954967712680761}
+  - {fileID: 7411098436862379407}
+--- !u!114 &1941615517160538531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,21 +78,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708ba31fc0632684daece22828b9d121, type: 3}
   m_Name: "\u6839\u8282\u70B9"
   m_EditorClassIdentifier: 
+  Guid: 7d1821de9f7c106469d269d7c464190f
   FrontNode: {fileID: 0}
   Output:
-  - Descirbe: 00
+  - Descirbe: 0
     Answer: "\u6211\u6253\u7B97\u53BB\u6CD5\u56FD"
-    NextNode: {fileID: 3270080881121736495}
-  - Descirbe: 01
+    NextNode: {fileID: 4608542862735128979}
+  - Descirbe: 1
     Answer: "\u6211\u6253\u7B97\u53BB\u7F8E\u56FD"
-    NextNode: {fileID: -2217889869305991398}
-  Title: "\u8D77\u70B9"
+    NextNode: {fileID: -4576937381707729756}
+  Title: ROOT
   Icon: {fileID: 0}
   Name: chasinghope
-  Type: 2
+  Type: 1
   Text: "\u5047\u671F\u53BB\u54EA\u513F\u73A9"
-  position: {x: 177, y: 100}
---- !u!114 &6286919500610816147
+  position: {x: 2, y: 273.08002}
+--- !u!114 &4608542862735128979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,20 +103,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 708ba31fc0632684daece22828b9d121, type: 3}
-  m_Name: "\u5BF9\u8BDD\u8282\u70B9"
+  m_Name: Node0
   m_EditorClassIdentifier: 
-  FrontNode: {fileID: -6241019276247017842}
+  Guid: 7a6893755b1cbdb46bc74b009e231f21
+  FrontNode: {fileID: 1941615517160538531}
   Output:
-  - Descirbe: 00
+  - Descirbe: 
     Answer: 
-    NextNode: {fileID: 1064539503022597126}
+    NextNode: {fileID: -617976259445125035}
   Title: NULL
   Icon: {fileID: 0}
   Name: chasinghope
   Type: 0
-  Text: "\u77D7\u7ACB\u5728\u6CD5\u56FD\u5DF4\u9ECE\u5E02\u6218\u795E\u5E7F\u573A\u4E0A\uFF0C\u65C1\u9760\u585E\u7EB3\u6CB3\uFF0C\u4E3A\u4E3E\u884C1889\u5E74\u4E16\u754C\u535A\u89C8\u4F1A\uFF0C\u7528\u4EE5\u5E86\u795D\u6CD5\u56FD\u5927\u9769\u547D\u80DC\u5229100\u5468\u5E74\uFF0C\u6CD5\u56FD\u653F\u5E9C\u8FDB\u884C\u5EFA\u7B51\u62DB\u6807\uFF0C\u6700\u7EC8\u786E\u7ACB\u57C3\u83F2\u5C14\u94C1\u5854\u3002\u5176\u59CB\u5EFA\u4E8E1887\u5E741\u670826\u65E5\uFF0C\u4E8E1889\u5E743\u670831\u65E5\u7AE3\u5DE5\uFF0C\u5E76\u6210\u4E3A\u5F53\u65F6\u4E16\u754C\u6700\u9AD8\u5EFA\u7B51\u3002"
-  position: {x: 719, y: -12}
---- !u!114 &6573755409887761734
+  Text: "\u6CD5\u56FD\u57C3\u83F2\u5C14\u94C1\u5854\u4E0D\u9519"
+  position: {x: 155, y: 208}
+--- !u!114 &7411098436862379407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,13 +127,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 708ba31fc0632684daece22828b9d121, type: 3}
-  m_Name: "\u5BF9\u8BDD\u8282\u70B9"
+  m_Name: Node5
   m_EditorClassIdentifier: 
-  FrontNode: {fileID: 1064539503022597126}
+  Guid: de393ae5f1198994b91a4588e9273957
+  FrontNode: {fileID: 8094954967712680761}
   Output: []
   Title: NULL
   Icon: {fileID: 0}
   Name: chasinghope
   Type: 0
-  Text: "\u5728\u57C3\u83F2\u5C14\u94C1\u5854\u7684\u56DB\u4E2A\u89D2\u4E0A\u523B\u670972\u4F4D\u79D1\u5B66\u5BB6\u7684\u540D\u5B57\uFF0C\u4ED6\u4EEC\u4E3A\u4FDD\u62A4\u94C1\u5854\u505A\u51FA\u4E86\u8D21\u732E\u3002"
-  position: {x: 1072.8965, y: -14}
+  Text: "\u57C3\u83F2\u5C14\u94C1\u5854\u7684\u7ED3\u6784\u4F53\u7CFB\u65E2\u76F4\u89C2\u53C8\u7B80\u6D01\uFF1A\u5E95\u90E8\u662F\u5206\u5E03\u5728\u6BCF\u8FB9128\u7C73\uFF0C\u957F\u5E95\u5EA7\u4E0A\u76844\u4E2A\u5DE8\u578B\u89D2\u5F62\u503E\u659C\u67F1\u58A9\uFF08\u503E\u89D254\xB0\uFF09\uFF0C\u5176\u7531\u6807\u9AD855\u7C73\u5904\u7684\u7B2C\u4E00\u5E73\u53F0\u652F\u6491\u7740\uFF1B\u7B2C\u4E00\u5E73\u53F0\u548C\u6807\u9AD8\u4E3A115\u7C73\u7684\u7B2C\u4E8C\u5E73\u53F0\u4E4B\u95F4\u67094\u4E2A\u5FAE\u66F2\u7684\u89D2\u7ACB\u67F1\u76F8\u8FDE\uFF1B\u5411\u4E0A\u8F6C\u5316\u4E3A\u7EC6\u957F\u7684\u3001\u51E0\u4E4E\u5782\u76F4\u7684\u3001189\u7C73\u9AD8\u3001\u521A\u6027\u5F88\u5927\u7684\u65B9\u5C16\u5854\uFF0C\u76F4\u901A\u9876\u90E8\u5E73\u53F0"
+  position: {x: 439, y: 441.88}
+--- !u!114 &8094954967712680761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708ba31fc0632684daece22828b9d121, type: 3}
+  m_Name: Node4
+  m_EditorClassIdentifier: 
+  Guid: fe16f8e0045d92e498a08f565f41b4eb
+  FrontNode: {fileID: -617976259445125035}
+  Output:
+  - Descirbe: 
+    Answer: 
+    NextNode: {fileID: 7411098436862379407}
+  Title: NULL
+  Icon: {fileID: 0}
+  Name: chasinghope
+  Type: 0
+  Text: "\u77D7\u7ACB\u5728\u6CD5\u56FD\u5DF4\u9ECE\u5E02\u6218\u795E\u5E7F\u573A\u4E0A\uFF0C\u65C1\u9760\u585E\u7EB3\u6CB3\uFF0C\u4E3A\u4E3E\u884C1889\u5E74\u4E16\u754C\u535A\u89C8\u4F1A\uFF0C\u7528\u4EE5\u5E86\u795D\u6CD5\u56FD\u5927\u9769\u547D\u80DC\u5229100\u5468\u5E74\uFF0C\u6CD5\u56FD\u653F\u5E9C\u8FDB\u884C\u5EFA\u7B51\u62DB\u6807\uFF0C\u6700\u7EC8\u786E\u7ACB\u57C3\u83F2\u5C14\u94C1\u5854\u3002\u5176\u59CB\u5EFA\u4E8E1887\u5E741\u670826\u65E5\uFF0C\u4E8E1889\u5E743\u670831\u65E5\u7AE3\u5DE5\uFF0C\u5E76\u6210\u4E3A\u5F53\u65F6\u4E16\u754C\u6700\u9AD8\u5EFA\u7B51\u3002"
+  position: {x: 401, y: 319}

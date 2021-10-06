@@ -26,4 +26,9 @@ public class DiaComponent : MonoBehaviour
         return currentDiaNode;
     }
 
+    public void ResetDiaTree()
+    {
+        currentDiaNode = startDiaNode;
+    }
+
 }

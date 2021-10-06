@@ -17,6 +17,9 @@ public class DiaInspectorView : VisualElement
 
     public void UpdateSelection(DiaNodeView nodeView)
     {
+        if (nodeView == null)
+            return;
+
         Clear();
         UnityEngine.Object.DestroyImmediate(editor);
         editor = Editor.CreateEditor(nodeView.node);

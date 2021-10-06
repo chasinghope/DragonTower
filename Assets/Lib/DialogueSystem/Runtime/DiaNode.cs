@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DiaNode : ScriptableObject
 {
+    [ReadOnly]
+    public string Guid;
+
     [Header("节点关系")]
     public DiaNode FrontNode;
     public List<DiaOutput> Output = new List<DiaOutput>();
@@ -13,14 +16,12 @@ public class DiaNode : ScriptableObject
     public string Title = "Null";
     public Sprite Icon;
     public string Name;
-    public DiaType Type = DiaType.None;
+    public DiaType Type = DiaType.PersonalityNarration;
     [TextArea(10, 20)]
     public string Text;
 
 
     public bool IsOver => Output == null;
-    public string Guid { get; internal set; }
-
     [HideInInspector]
     public Vector2 position = Vector2.one * 30;
 

@@ -9,8 +9,9 @@ public class DiaTreeEditorWindow : EditorWindow
     DiaGraphView diaGraphView;
     DiaInspectorView diaInspectorView;
     ToolbarMenu toolBarMenu;
+    DiaTree tree;
 
-    [MenuItem("Window/DiaTreeEditorWindow")]
+   [MenuItem("Window/DiaTreeEditorWindow")]
     public static void ShowExample()
     {
         DiaTreeEditorWindow wnd = GetWindow<DiaTreeEditorWindow>();
@@ -31,16 +32,21 @@ public class DiaTreeEditorWindow : EditorWindow
         diaGraphView = root.Q<DiaGraphView>();
         diaInspectorView = root.Q<DiaInspectorView>();
 
-        toolBarMenu.menu.AppendAction("Refresh", (a) => OnSelectionChange());                                                  
+        toolBarMenu.menu.AppendAction("Refresh", (a) => OnSelectionChange());
+        toolBarMenu.menu.AppendAction("Save", (a) => {
+            if (tree)
+                tree.SaveTheTree();
+            });
         diaGraphView.OnSelectedDiaNode = diaInspectorView.UpdateSelection;
     }
 
 
     private void OnSelectionChange()
     {
-        DiaTree tree = Selection.activeObject as DiaTree;
+        tree = Selection.activeObject as DiaTree;
         if (tree)
         {
+            
             diaGraphView.PopulateView(tree);
         }
     }

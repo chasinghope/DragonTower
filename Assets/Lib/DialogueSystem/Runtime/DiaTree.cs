@@ -49,7 +49,7 @@ public class DiaTree : ScriptableObject
     {
         DiaNode node = ScriptableObject.CreateInstance<DiaNode>();
         node.Title = "NULL";
-        node.name = "对话节点";
+        node.name = "Node" + Tree.Count.ToString();
         //node.position = pos;
         node.Guid = GUID.Generate().ToString();
         Tree.Add(node);
@@ -76,7 +76,7 @@ public class DiaTree : ScriptableObject
 
     public void Remove(DiaNode front, DiaNode next)
     {
-        DiaOutput entity = front.Output.Find(a=>a.NextNode.GetHashCode() == next.GetHashCode());
+        DiaOutput entity = front.Output.Find(a=>a.NextNode.Guid == next.Guid);
         front.Output.Remove(entity);
         next.FrontNode = null;
     }
@@ -92,5 +92,12 @@ public class DiaTree : ScriptableObject
         next.FrontNode = front;
     }
 
+
+    public void SaveTheTree()
+    {
+        EditorUtility.SetDirty(this);
+        AssetDatabase.Refresh();
+        Debug.Log($"{this.name} 保存成功");
+    }
  
 }

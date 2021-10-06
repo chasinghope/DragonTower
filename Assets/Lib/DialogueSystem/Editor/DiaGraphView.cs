@@ -104,11 +104,13 @@ public class DiaGraphView : GraphView
         graphElements.ForEach((a) => RemoveElement(a));
 
         diaTree.Tree.ForEach((a) => CreateNodeView(a));
-        diaTree.Tree.ForEach(a =>{
-            DiaNodeView front = FindNodeView(a);
-            for (int i = 0; i < a.Output.Count; i++)
+        diaTree.Tree.ForEach(currentNode =>
+        {
+            DiaNodeView front = FindNodeView(currentNode);
+            for (int i = 0; i < currentNode.Output.Count; i++)
             {
-                DiaNodeView next = FindNodeView(a.Output[i].NextNode);
+                DiaNodeView next = FindNodeView(currentNode.Output[i].NextNode);
+                //Debug.Log($"------------------ {currentNode.Guid}   {currentNode.Output[i].NextNode.Guid}");
                 Edge edge = front.outputPorts[i].ConnectTo(next.inputPort);
                 AddElement(edge);
             }
