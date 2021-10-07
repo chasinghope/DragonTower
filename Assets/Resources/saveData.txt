@@ -1,0 +1,1 @@
+{"PersonalityData":{"R0_weight":90.0,"R1_weight":0.0,"R2_weight":0.0,"R3_weight":0.0,"R4_weight":60.0,"R5_weight":0.0,"R6_weight":0.0,"R7_weight":0.0,"R8_weight":8.0}}
