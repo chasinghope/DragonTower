@@ -1,0 +1,44 @@
+{
+    "name": "New Controls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "4923c9cd-9b2e-4e4e-98ec-62c857fca715",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "be008155-0b69-468f-9360-5577bb2114b1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f7880dda-d8b2-453f-95d5-712b3f09343d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "907be89a-8800-46be-9c3b-0b0716194269",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
