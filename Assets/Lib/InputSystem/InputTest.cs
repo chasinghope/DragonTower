@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class InputTest : MonoBehaviour
 {
     private NewControls newControls;
+
+
+
+    public const string DefaultJson = "Lib/InputSystem/DefaultInput.json";
+
 
     private void Awake()
     {
@@ -29,6 +35,14 @@ public class InputTest : MonoBehaviour
         {
             Debug.Log("Rigth");
         };
+
+
+
+
+        //string defaultInputAsset = File.ReadAllText(Path.Combine(Application.dataPath, DefaultJson));
+        //newControls.asset.LoadFromJson(defaultInputAsset);
+        //Debug.Log(defaultInputAsset);
+
     }
 
 

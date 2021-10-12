@@ -97,7 +97,7 @@ public class DiaNodeView : UnityEditor.Experimental.GraphView.Node
     {
         if(inputPort == null)
         {
-            inputPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(bool));
+            inputPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Multi, typeof(bool));
             inputPort.portName = "enter";
             inputPort.portColor = new Color(50/255f, 205/255f, 50/255f);
             inputContainer.Add(inputPort);

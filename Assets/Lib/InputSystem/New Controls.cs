@@ -55,8 +55,19 @@ public class @NewControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""04a8a48a-407a-47a4-bfe8-3b68d892ca03"",
-                    ""path"": ""<Keyboard>/w"",
+                    ""path"": ""<Keyboard>/c"",
                     ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0fe5e741-5917-446d-bd1d-fcd0bcf33ded"",
+                    ""path"": ""<XInputController>/buttonNorth"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Up"",
@@ -76,6 +87,17 @@ public class @NewControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""51a89a5c-265e-4638-81e9-53bbcd7bcf73"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""6f26e493-ec32-4281-93e8-93fe19c74c23"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": ""Press"",
@@ -87,8 +109,30 @@ public class @NewControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""6c8ff5cf-53de-4289-97e6-43e9551bc043"",
+                    ""path"": ""<XInputController>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""eaadf5fa-56c6-44df-bbbe-a4db9df5071c"",
                     ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""740a68be-918d-4a0c-ad1d-440bd2a73fc7"",
+                    ""path"": ""<XInputController>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

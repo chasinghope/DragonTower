@@ -232,7 +232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000009536743}
+  m_AnchoredPosition: {x: 0, y: 1194.9834}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &95176291
@@ -307,9 +307,9 @@ RectTransform:
   m_Father: {fileID: 2143229950}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000036507845}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 934.82117}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &531251202
@@ -1335,7 +1335,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 34862655}
   m_HandleRect: {fileID: 34862654}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 0.61783445
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1649,8 +1649,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1743294514}
   m_HandleRect: {fileID: 1743294513}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.000021388698
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1994,6 +1994,8 @@ MonoBehaviour:
   Content: {fileID: 531251201}
   otherTemplateView: {fileID: 718919645}
   selfTemplateView: {fileID: 1852508146}
+  charBar: {fileID: 0}
+  charRect: {fileID: 1090754961}
   ReplyContent: {fileID: 95176290}
   replyView: {fileID: 1704986068}
   ReplyPanel: {fileID: 1903640276}
