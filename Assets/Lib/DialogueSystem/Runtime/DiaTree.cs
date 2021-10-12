@@ -9,6 +9,7 @@ using System;
 [CreateAssetMenu()]
 public class DiaTree : ScriptableObject
 {
+    public string Info;
     //public const string path = "Assets/Lib/DialogueSystem/NewDiaTree.assets";
     [HideInInspector]
     public DiaNode root;

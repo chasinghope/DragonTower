@@ -4,17 +4,42 @@ using UnityEngine;
 
 public class InputTest : MonoBehaviour
 {
-    NewControls newControl;
+    private NewControls newControls;
 
-    private void OnEnable()
+    private void Awake()
     {
-        
+        //newControls.asset.actionMaps
+        newControls = new NewControls();
+        newControls.Gameplay.Down.performed += ctx =>
+        {
+            Debug.Log("Down");
+        };
+
+        newControls.Gameplay.Up.performed += ctx =>
+        {
+            Debug.Log("Up");
+        };
+
+        newControls.Gameplay.Left.performed += ctx =>
+        {
+            Debug.Log("Left");
+        };
+
+        newControls.Gameplay.Right.performed += ctx =>
+        {
+            Debug.Log("Rigth");
+        };
     }
 
 
-    private void OnDisable()
+    public void OnEnable()
     {
-        
+        newControls.Enable();
+    }
+
+    public void OnDisable()
+    {
+        newControls.Disable();
     }
 
 }

@@ -20,7 +20,7 @@ MonoBehaviour:
   Name: chasinghope
   Type: 0
   Text: "\u7F8E\u56FD\u81EA\u7531\u5973\u795E\u50CF\u4E0D\u9519"
-  position: {x: 155, y: 319}
+  position: {x: 155, y: 320}
 --- !u!114 &-617976259445125035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc5d3398ebee2a42b4e966f1474bc72, type: 3}
   m_Name: New Dia Tree
   m_EditorClassIdentifier: 
+  Info: asdfasd fas fasdfasdfasdfasdf asdfasdfasd fasdfasfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdffasdfasdfasdfasdfasdfsadfasfsadfasfsdfsdfsdf
   root: {fileID: 1941615517160538531}
   Tree:
   - {fileID: 4608542862735128979}

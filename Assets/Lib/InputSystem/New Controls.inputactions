@@ -6,9 +6,33 @@
             "id": "4923c9cd-9b2e-4e4e-98ec-62c857fca715",
             "actions": [
                 {
-                    "name": "Jump",
+                    "name": "Up",
                     "type": "Button",
-                    "id": "be008155-0b69-468f-9360-5577bb2114b1",
+                    "id": "fe4f7791-1ca4-4cdd-afae-e7da25fbaed2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Down",
+                    "type": "Button",
+                    "id": "470bc95a-1db9-40a9-99df-429ef576bdf6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Left",
+                    "type": "Button",
+                    "id": "514ab39c-2751-46d2-a4ce-8b69e829b6d8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Right",
+                    "type": "Button",
+                    "id": "68e5e790-bae5-4df5-9c95-40dd49d8e132",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -17,23 +41,45 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "f7880dda-d8b2-453f-95d5-712b3f09343d",
-                    "path": "<Keyboard>/space",
+                    "id": "04a8a48a-407a-47a4-bfe8-3b68d892ca03",
+                    "path": "<Keyboard>/w",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Up",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "907be89a-8800-46be-9c3b-0b0716194269",
-                    "path": "<XInputController>/buttonSouth",
+                    "id": "ac4a3780-bd08-4d3d-910a-a62e6426e111",
+                    "path": "<Keyboard>/s",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f26e493-ec32-4281-93e8-93fe19c74c23",
+                    "path": "<Keyboard>/a",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eaadf5fa-56c6-44df-bbbe-a4db9df5071c",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

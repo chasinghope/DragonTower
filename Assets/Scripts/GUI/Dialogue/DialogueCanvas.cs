@@ -43,28 +43,57 @@ public class DialogueCanvas : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Q) && !IsTaking)
+    //    {
+    //        myCanvas.enabled = true;
+    //        diaComponent = Transform.FindObjectOfType<DiaComponent>();
+    //        CreateDiaContent(diaComponent.startDiaNode);
+    //        IsTaking = true;
+    //    }
+
+    //    if (Input.GetKeyDown(KeyCode.Space) && IsWaittingNext)
+    //    {
+    //        IsWaittingNext = false;
+    //        GoNextDialogue();
+    //    }
+    //}
+
+
+    /// <summary>
+    /// 开启对话
+    /// </summary>
+    public void DoAction_Dialogue()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && !IsTaking)
+        if (!IsTaking)
         {
             myCanvas.enabled = true;
             diaComponent = Transform.FindObjectOfType<DiaComponent>();
             CreateDiaContent(diaComponent.startDiaNode);
             IsTaking = true;
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsWaittingNext)
+    /// <summary>
+    /// 继续对话
+    /// </summary>
+    public void DoAction_ContinueTalk()
+    {
+        if (IsWaittingNext)
         {
             IsWaittingNext = false;
             GoNextDialogue();
         }
     }
 
+
+
     /// <summary>
     /// 根据回答前往下一句话
     /// </summary>
     /// <param name="index"></param>
-    public void GoNextDialogueByReply(int index)
+    private void GoNextDialogueByReply(int index)
     {
         if (diaComponent == null)
             return;
@@ -83,7 +112,7 @@ public class DialogueCanvas : MonoBehaviour
     /// <summary>
     /// 前往下一句话
     /// </summary>
-    public void GoNextDialogue()
+    private void GoNextDialogue()
     {
         if (diaComponent == null)
             return;
