@@ -36,6 +36,7 @@ public class DiaTreeEditorWindow : EditorWindow
         toolBarMenu.menu.AppendAction("Save", (a) => {
             if (tree)
                 tree.SaveTheTree();
+                EditorUtility.DisplayDialog("提示", $"{tree.name}保存成功", "确认");
             });
         diaGraphView.OnSelectedDiaNode = diaInspectorView.UpdateSelection;
     }
@@ -46,8 +47,8 @@ public class DiaTreeEditorWindow : EditorWindow
         tree = Selection.activeObject as DiaTree;
         if (tree)
         {
-            
             diaGraphView.PopulateView(tree);
+            EditorUtility.DisplayDialog("提示", $"{tree.name}已刷新", "确认");
         }
     }
 }

@@ -12,6 +12,8 @@ public class DialogueCanvas : MonoBehaviour
     public Transform Content;
     public DialogueTemplateView otherTemplateView;
     public DialogueTemplateView selfTemplateView;
+    public Scrollbar charBar;
+    public ScrollRect charRect;
 
     [Header("Reply Scroll View")]
     public Transform ReplyContent;
@@ -43,28 +45,57 @@ public class DialogueCanvas : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Q) && !IsTaking)
+    //    {
+    //        myCanvas.enabled = true;
+    //        diaComponent = Transform.FindObjectOfType<DiaComponent>();
+    //        CreateDiaContent(diaComponent.startDiaNode);
+    //        IsTaking = true;
+    //    }
+
+    //    if (Input.GetKeyDown(KeyCode.Space) && IsWaittingNext)
+    //    {
+    //        IsWaittingNext = false;
+    //        GoNextDialogue();
+    //    }
+    //}
+
+
+    /// <summary>
+    /// 开启对话
+    /// </summary>
+    public void DoAction_Dialogue()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && !IsTaking)
+        if (!IsTaking)
         {
             myCanvas.enabled = true;
             diaComponent = Transform.FindObjectOfType<DiaComponent>();
             CreateDiaContent(diaComponent.startDiaNode);
             IsTaking = true;
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsWaittingNext)
+    /// <summary>
+    /// 继续对话
+    /// </summary>
+    public void DoAction_ContinueTalk()
+    {
+        if (IsWaittingNext)
         {
             IsWaittingNext = false;
             GoNextDialogue();
         }
     }
 
+
+
     /// <summary>
     /// 根据回答前往下一句话
     /// </summary>
     /// <param name="index"></param>
-    public void GoNextDialogueByReply(int index)
+    private void GoNextDialogueByReply(int index)
     {
         if (diaComponent == null)
             return;
@@ -83,7 +114,7 @@ public class DialogueCanvas : MonoBehaviour
     /// <summary>
     /// 前往下一句话
     /// </summary>
-    public void GoNextDialogue()
+    private void GoNextDialogue()
     {
         if (diaComponent == null)
             return;
@@ -124,24 +155,17 @@ public class DialogueCanvas : MonoBehaviour
     /// <param name="diaNode"></param>
     private void CreateDiaContent(DiaNode diaNode)
     {
-        DialogueTemplateView other = Instantiate(otherTemplateView.gameObject).GetComponent<DialogueTemplateView>();
-        other.transform.SetParent(Content);
-        other.SpeakerImg.sprite = diaNode.Icon;
-        other.NameText.text = diaNode.Name;
-        other.ContentText.text = diaNode.Text;
-        other.gameObject.SetActive(true);
 
-
-        other.RefreshLayout();
-        LayoutRebuilder.ForceRebuildLayoutImmediate(refreshRect);
 
         switch (diaNode.Type)
         {
             case DiaType.PersonalityNarration:
+
+                OtherSay(diaNode);
                 IsWaittingNext = true;
                 break;
             case DiaType.PersonalityAdjudication:
-
+                OtherSay(diaNode);
                 //清理对话选项
                 DialogueReplyView[] replys = ReplyContent.transform.GetComponentsInChildren<DialogueReplyView>();
                 foreach (var item in replys)
@@ -167,12 +191,52 @@ public class DialogueCanvas : MonoBehaviour
                     }
                 }
                 break;
+            case DiaType.Lead:
+
+                SelfSay(diaNode);
+                IsWaittingNext = true;
+
+                break;
             case DiaType.NPC:
                 break;
             default:
                 break;
         }
 
+        charRect.verticalNormalizedPosition = 0;
+        //charBar.value = 0;
+        //charRect.verticalNormalizedPosition 
+    }
+
+
+
+    private void OtherSay(DiaNode diaNode)
+    {
+        DialogueTemplateView other = Instantiate(otherTemplateView.gameObject).GetComponent<DialogueTemplateView>();
+        other.transform.SetParent(Content);
+        other.SpeakerImg.sprite = diaNode.Icon;
+        other.NameText.text = diaNode.Name;
+        other.ContentText.text = diaNode.Text;
+        other.gameObject.SetActive(true);
+
+
+        other.RefreshLayout();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(refreshRect);
+    }
+
+
+    private void SelfSay(DiaNode diaNode)
+    {
+        DialogueTemplateView self = Instantiate(selfTemplateView.gameObject).GetComponent<DialogueTemplateView>();
+        self.transform.SetParent(Content);
+        self.SpeakerImg.sprite = PlayerIcon;
+        self.NameText.text = PlayerName;
+        self.ContentText.text = diaNode.Text;
+        self.gameObject.SetActive(true);
+
+
+        self.RefreshLayout();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(refreshRect);
     }
 
 
