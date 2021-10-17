@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class InputSystemTest : MonoBehaviour
 {
-
+    [SerializeField]
+    private InputActionAsset inputActionAsset;
     [SerializeField]
     private PlayerInput playerInput;
     [SerializeField]
@@ -14,7 +15,9 @@ public class InputSystemTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        string rebinds = PlayerPrefs.GetString("InputRebindSettings");
+        if (!string.IsNullOrEmpty(rebinds))
+            inputActionAsset.LoadBindingOverridesFromJson(rebinds);
     }
 
     // Update is called once per frame

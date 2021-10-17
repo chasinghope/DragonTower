@@ -8,6 +8,7 @@ public class InputUIPanel : MonoBehaviour
     [SerializeField]
     private InputActionAsset inputActionAsset;
 
+
     private void OnEnable()
     {
         string rebinds = PlayerPrefs.GetString("InputRebindSettings");

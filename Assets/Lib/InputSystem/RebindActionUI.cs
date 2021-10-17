@@ -482,7 +482,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             if (m_ActionLabel != null)
             {
                 var action = m_Action?.action;
-                m_ActionLabel.text = action != null ? action.name : string.Empty;
+                //m_ActionLabel.text = action != null ? action.name : string.Empty;
             }
         }
 
