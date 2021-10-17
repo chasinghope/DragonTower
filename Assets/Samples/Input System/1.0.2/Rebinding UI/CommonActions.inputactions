@@ -1,0 +1,71 @@
+{
+    "name": "CommonActions",
+    "maps": [
+        {
+            "name": "Common",
+            "id": "480d0d63-4e0d-4860-9935-0249f63a4a35",
+            "actions": [
+                {
+                    "name": "start-up",
+                    "type": "Button",
+                    "id": "abd11b76-b91f-4d3f-bb32-0189b725536d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "end-up",
+                    "type": "Button",
+                    "id": "0039e15e-8f0a-47a5-98ce-f329109699dd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "save",
+                    "type": "Button",
+                    "id": "f25b1f4f-01df-438d-8007-53e04869a922",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6c6f8525-0ef2-4ce7-b08b-45a7f1a4849c",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "start-up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "279e6897-ba76-47b5-839f-2312ca7334ce",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "end-up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ee52696-72c2-4634-8e88-72290f46efc7",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "save",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
