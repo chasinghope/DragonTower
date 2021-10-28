@@ -75,3 +75,15 @@ DragonTower Game
 
 ..\DragonTower\Assets\Lib\InputSystem\InputSystem.unity
 
+## 2021.10.24
+
+开会作用声明：
+
+1. 阐述上周工作情况，遇到的问题，需要支持的地方。
+2. 明确下周的工作目标，预估工作时长，在trello看板自己所属的位置添加卡片，设置制作人，完成时间，参考文件等信息。
+3. 讨论游戏中的问题。
+
+trello:
+
+www.trello.com
+
